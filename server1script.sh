@@ -9,6 +9,5 @@ apt-get install syslog-ng-core
 #Make back-up
 cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 rm /etc/syslog-ng/syslog-ng.conf
-cd /etc/syslog-ng/syslog-ng
-wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/syslog-ng.conf
-/etc/init.d/syslog restart
+cd /etc/syslog-ng/
+sudo wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/syslog-ng.conf
