@@ -5,3 +5,4 @@ echo $'\nEnter IP address:\n'
 read ipaddrng
 echo $'\n'
 sed -i 's/syslog(ip(10.0.0.0)/syslog(ip($ipaddrng)/g' /etc/syslog-ng/syslog-ng.conf
+/etc/init.d/syslog restart
