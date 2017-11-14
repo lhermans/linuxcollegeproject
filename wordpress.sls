@@ -40,8 +40,7 @@ apache2:
   #TODO: Copy WP dir to /var/www/html
 wordpress:
   cmd.run:
-    - name: 'wget http://wordpress.org/latest.tar.gz && tar xvzf latest.tar.gz'
-    - creates: /tmp/wp
+    - name: 'wget http://wordpress.org/latest.tar.gz -P /var/www/wordpress && tar xvzf latest.tar.gz '
   
   
 #Set ownership of WP dir to current user
