@@ -23,3 +23,5 @@ salt-key -A
 mkdir /srv/pillar
 cd /srv/pillar
 wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/syslog-ng.conf
+
+#salt '*' pkg.refresh_db
