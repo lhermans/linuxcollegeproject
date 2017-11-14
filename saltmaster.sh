@@ -21,3 +21,5 @@ salt-key -A
 
 #Make pillar
 mkdir /srv/pillar
+cd /srv/pillar
+wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/syslog-ng.conf
