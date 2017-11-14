@@ -8,26 +8,17 @@ apt-get update
 apt-get install syslog-ng-core
 
 #Make back-up
-cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
+cp /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf.orig
 rm /etc/syslog-ng/syslog-ng.conf
 cd /etc/syslog-ng/
 sudo wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/syslog-ng.conf
 
-
+#Install cacti
+cd /home/ubuntu
+wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/saltmaster.sh
+sudo sh cacti.sh
 #Load and execute salt master script
 cd /home/ubuntu
 wget https://raw.githubusercontent.com/lhermans/linuxeindropracht/master/saltmaster.sh
 sudo sh saltmaster.sh
 
-#/etc/salt/master aanpassingen:
-#interface: 0.0.0.0 naar 10.3.1.37
-#hash_type: md5 naar sha512
-
-salt-master
-
-#Minion-related WIP
-#salt-key -F master | grep master.pub | cut -d " " -f3
-
-
-#Accept all incoming keys
-salt-key -A

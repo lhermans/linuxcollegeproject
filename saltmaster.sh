@@ -8,3 +8,16 @@ apt-get -y install salt-minion
 apt-get -y install salt-ssh
 apt-get -y install salt-syndic
 
+#/etc/salt/master aanpassingen:
+#interface: 0.0.0.0 naar 10.3.1.37
+#hash_type: md5 naar sha512
+
+#Minion-related WIP
+#salt-key -F master | grep master.pub | cut -d " " -f3
+
+
+#Accept all incoming keys
+salt-key -A
+
+#Make pillar
+mkdir /srv/pillar
