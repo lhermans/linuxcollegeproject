@@ -3,4 +3,3 @@ snmpd:
   service.running:
     - require:
       - pkg:  snmpd
-	- reload: True
